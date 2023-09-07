@@ -54,7 +54,7 @@ namespace Rivet {
 
       // book histograms
       book(_hist_WZ, "d01-x01-y01");
-      book(_h_Z_mass ,"Z_mass", 40, 0.0, 200.0);
+      
     }
 
 
@@ -96,7 +96,7 @@ namespace Rivet {
 
       // fill the histograms
       _hist_WZ->fill(5020);
-      _h_Z_mass->fill((dressedLeptons.at(0).momentum() + dressedLeptons.at(1).momentum() + dressedLeptons.at(2).momentum()).mass()) ; // this is our dilepton mass
+      
     }
 
     /// @brief Normalise histograms after the run
@@ -107,7 +107,7 @@ namespace Rivet {
   private:
     // Declaration of histograms
     Histo1DPtr _hist_WZ;
-    Histo1DPtr _h_Z_mass;
+    
   };
 
   RIVET_DECLARE_PLUGIN(WZtest);
